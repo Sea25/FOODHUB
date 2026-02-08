@@ -460,4 +460,22 @@ footer {
   .contact-container {
     grid-template-columns: 1fr;
   }
+
 }
+
+/* About Section */
+.about-section {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  font-size: 1.05rem;
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.8;
+}
+
+
