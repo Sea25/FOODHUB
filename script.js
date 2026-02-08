@@ -1,4 +1,8 @@
+
 // Smooth scrolling for navigation links
+let cartCount = 0;
+const cartCountEl = document.getElementById('cart-count');
+
 document.querySelectorAll('nav a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -35,6 +39,9 @@ document.querySelectorAll('.order-btn').forEach(button => {
     
     // In a real app, you would add to cart here
     console.log(`Added ${menuItem} (${price}) to cart`);
+    cartCount++;
+    cartCountEl.textContent = cartCount;
+
     
     // Show notification (optional)
     showNotification(`${menuItem} added to cart!`);
@@ -126,4 +133,5 @@ window.addEventListener('scroll', function() {
     header.style.padding = '1rem 0';
     header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
   }
+
 });
